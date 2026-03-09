@@ -40,7 +40,7 @@ You can also use color gradient in background, with the following syntax: two co
 
 *    `|`,
 *    `/`,
-*    `\\`, or
+*    `\\`, or 
 *    `-`
 
 depending the direction of the gradient.
@@ -166,4 +166,5 @@ rectangle "//TBC//\n..."
 }
 @enduml
 ```
+
 

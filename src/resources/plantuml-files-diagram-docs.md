@@ -4,7 +4,7 @@ You can use PlantUML to visualize directories and files tree.
 
 To activate this feature, the diagram must:
 * begin with ``@startfiles`` keyword
-* end with ``@endfiles`` keyword.
+* end with ``@endfiles`` keyword. 
 
 ```plantuml
 @startfiles
@@ -103,4 +103,5 @@ this is a note on b1
 ```
 
 *[Ref. [QA-18534](https://forum.plantuml.net/18534/note-invalid-position-in-directory-tree-listing)]*
+
 

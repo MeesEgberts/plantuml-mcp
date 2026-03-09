@@ -193,8 +193,8 @@ class Dummy {
 }
 
 class Flight {
-flightNumber : Integer
-departureTime : Date
+   flightNumber : Integer
+   departureTime : Date
 }
 @enduml
 ```
@@ -204,8 +204,8 @@ override default behaviour of the parser about fields and methods.
 ```plantuml
 @startuml
 class Dummy {
-{field} A field (despite parentheses)
-{method} Some method
+  {field} A field (despite parentheses)
+  {method} Some method
 }
 
 @enduml
@@ -230,10 +230,10 @@ visibility of the corresponding item:
 @startuml
 
 class Dummy {
--field1
-#field2
-~method1()
-+method2()
+ -field1
+ #field2
+ ~method1()
+ +method2()
 }
 
 @enduml
@@ -357,16 +357,16 @@ class Foo1 {
 }
 
 class User {
-.. Simple Getter ..
-+ getName()
-+ getAddress()
+  .. Simple Getter ..
+  + getName()
+  + getAddress()
   .. Some setter ..
-+ setName()
+  + setName()
   __ private data __
   int age
   -- encrypted --
   String password
-  }
+}
 
 @enduml
 ```
@@ -430,16 +430,16 @@ class Foo
 note left: On last defined class
 
 note top of Foo
-In java, <size:18>every</size> <u>class</u>
-<b>extends</b>
-<i>this</i> one.
+  In java, <size:18>every</size> <u>class</u>
+  <b>extends</b>
+  <i>this</i> one.
 end note
 
 note as N1
-This note is <u>also</u>
-<b><color:royalBlue>on several</color>
-<s>words</s> lines
-And this is hosted by <img:https://plantuml.com/sourceforge.jpg>
+  This note is <u>also</u>
+  <b><color:royalBlue>on several</color>
+  <s>words</s> lines
+  And this is hosted by <img:https://plantuml.com/sourceforge.jpg>
 end note
 
 @enduml
@@ -550,22 +550,22 @@ AbstractCollection <|- AbstractList
 AbstractList <|-- ArrayList
 
 class ArrayList {
-Object[] elementData
-size()
+  Object[] elementData
+  size()
 }
 
 enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+  DAYS
+  HOURS
+  MINUTES
 }
 
 annotation SuppressWarnings
 
 annotation Annotation {
-annotation with members
-String foo()
-String bar()
+  annotation with members
+  String foo()
+  String bar()
 }
 
 
@@ -607,11 +607,11 @@ exceptions.
 @startuml
 
 class Dummy1 {
-+myMethods()
+  +myMethods()
 }
 
 class Dummy2 {
-+hiddenMethod()
+  +hiddenMethod()
 }
 
 class Dummy3 <<Serializable>> {
@@ -635,9 +635,9 @@ hide protected members
 hide package members
 
 class Foo {
-- private
-# protected
-~ package
+  - private
+  # protected
+  ~ package
 }
 @enduml
 ```
@@ -702,36 +702,36 @@ C1 -- I1
 
 But you can:
 * `hide $tag13` components:
-  ```plantuml
-  @startuml
-  class C1 $tag13
-  enum E1
-  interface I1 $tag13
-  C1 -- I1
+```plantuml
+@startuml
+class C1 $tag13
+enum E1
+interface I1 $tag13
+C1 -- I1
 
 hide $tag13
 @enduml
 ```
 
 * or `remove $tag13` components:
-  ```plantuml
-  @startuml
-  class C1 $tag13
-  enum E1
-  interface I1 $tag13
-  C1 -- I1
+```plantuml
+@startuml
+class C1 $tag13
+enum E1
+interface I1 $tag13
+C1 -- I1
 
 remove $tag13
 @enduml
 ```
 
 * or `remove $tag13 and restore $tag1` components:
-  ```plantuml
-  @startuml
-  class C1 $tag13 $tag1
-  enum E1
-  interface I1 $tag13
-  C1 -- I1
+```plantuml
+@startuml
+class C1 $tag13 $tag1
+enum E1
+interface I1 $tag13
+C1 -- I1
 
 remove $tag13
 restore $tag1
@@ -739,12 +739,12 @@ restore $tag1
 ```
 
 * or ``remove * and restore $tag1`` components:
-  ```plantuml
-  @startuml
-  class C1 $tag13 $tag1
-  enum E1
-  interface I1 $tag13
-  C1 -- I1
+```plantuml
+@startuml
+class C1 $tag13 $tag1
+enum E1
+interface I1 $tag13
+C1 -- I1
 
 remove *
 restore $tag1
@@ -766,24 +766,24 @@ C1 -- C2
 
 But you can:
 * `hide @unlinked` classes:
-  ```plantuml
-  @startuml
-  class C1
-  class C2
-  class C3
-  C1 -- C2
+```plantuml
+@startuml
+class C1
+class C2
+class C3
+C1 -- C2
 
 hide @unlinked
 @enduml
 ```
 
 * or `remove @unlinked` classes:
-  ```plantuml
-  @startuml
-  class C1
-  class C2
-  class C3
-  C1 -- C2
+```plantuml
+@startuml
+class C1
+class C2
+class C3
+C1 -- C2
 
 remove @unlinked
 @enduml
@@ -802,7 +802,7 @@ You can also use bracket ``<`` and ``>`` to define generics usage in a class.
 @startuml
 
 class Foo<? extends Element> {
-int size()
+  int size()
 }
 Foo *- Element
 
@@ -843,12 +843,12 @@ Note that package definitions can be nested.
 @startuml
 
 package "Classic Collections" #DDDDDD {
-Object <|-- ArrayList
+  Object <|-- ArrayList
 }
 
 package com.plantuml {
-Object <|-- Demo1
-Demo1 *- Demo2
+  Object <|-- Demo1
+  Demo1 *- Demo2
 }
 
 @enduml
@@ -872,23 +872,23 @@ package foo1 <<Node>> {
 }
 
 package foo2 <<Rectangle>> {
-class Class2
+  class Class2
 }
 
 package foo3 <<Folder>> {
-class Class3
+  class Class3
 }
 
 package foo4 <<Frame>> {
-class Class4
+  class Class4
 }
 
 package foo5 <<Cloud>> {
-class Class5
+  class Class5
 }
 
 package foo6 <<Database>> {
-class Class6
+  class Class6
 }
 
 @enduml
@@ -907,7 +907,7 @@ package foo1.foo2 {
 }
 
 package foo1.foo2.foo3 {
-class Object
+  class Object
 }
 
 foo1.foo2 +-- foo1.foo2.foo3
@@ -921,7 +921,7 @@ foo1.foo2 +-- foo1.foo2.foo3
 
 Starting with version 1.2023.2 (which is online as a beta), PlantUML handles differently namespaces and packages.
 
-There won't be any difference between namespaces and packages anymore: both keywords are now synonymous.
+There won't be any difference between namespaces and packages anymore: both keywords are now synonymous. 
 
 
 ## Automatic package creation
@@ -935,7 +935,7 @@ the command : ``set separator ???``.
 
 set separator ::
 class X1::X2::foo {
-some info
+  some info
 }
 
 @enduml
@@ -949,7 +949,7 @@ You can disable automatic namespace creation using the command
 
 set separator none
 class X1.X2.foo {
-some info
+  some info
 }
 
 @enduml
@@ -1013,7 +1013,7 @@ or the two first characters (``-do-``).
 
 Please note that you should not abuse this functionality : *Graphviz* gives usually good results without tweaking.
 
-And with the [``left to right direction``](use-case-diagram#d551e48d272b2b07) parameter:
+And with the [``left to right direction``](use-case-diagram#d551e48d272b2b07) parameter: 
 ```plantuml
 @startuml
 left to right direction
@@ -1032,14 +1032,14 @@ defined between two classes, like in this example:
 ```plantuml
 @startuml
 class Student {
-Name
+  Name
 }
 Student "0..*" - "1..*" Course
 (Student, Course) .. Enrollment
 
 class Enrollment {
-drop()
-cancel()
+  drop()
+  cancel()
 }
 @enduml
 ```
@@ -1055,8 +1055,8 @@ Student "0..*" -- "1..*" Course
 (Student, Course) . Enrollment
 
 class Enrollment {
-drop()
-cancel()
+  drop()
+  cancel()
 }
 @enduml
 ```
@@ -1072,7 +1072,7 @@ class Station {
 }
 
 class StationCrossing {
-+cost: TimeInterval
+    +cost: TimeInterval
 }
 
 <> diamond
@@ -1144,9 +1144,9 @@ Class03 o-- Class04 : aggregation
 @enduml
 ```
 
-**Important**: unlike class stereotypes, there must be no space between the skin parameter and the following stereotype.
+**Important**: unlike class stereotypes, there must be no space between the skin parameter and the following stereotype. 
 
-Any of the spaces shown as `_` below will cause **all** skinparams to be ignored,
+Any of the spaces shown as `_` below will cause **all** skinparams to be ignored, 
 see [discord discussion](https://discord.com/channels/1083727021328306236/1289954399321329755/1289967399302467614)
 and [issue #1932](https://github.com/plantuml/plantuml/issues/1932):
 - `BackgroundColor_<<Foo>> Wheat`
@@ -1163,9 +1163,9 @@ You can also use color gradient for background colors, with the following syntax
 two colors names separated either by:
 * ``|``,
 * ``/``,
-* ``\``, or
+* ``\``, or 
 * ``-``
-  depending on the direction of the gradient.
+depending on the direction of the gradient.
 
 For example:
 
@@ -1177,12 +1177,12 @@ skinparam classBackgroundColor Wheat|CornflowerBlue
 
 class Foo #red-green
 note left of Foo #blue\9932CC
-this is my
-note on this class
+  this is my
+  note on this class
 end note
 
 package example #GreenYellow/LightGoldenRodYellow {
-class Dummy
+  class Dummy
 }
 
 @enduml
@@ -1204,9 +1204,9 @@ You can also use ``hidden`` links to force the layout.
 class Bar1
 class Bar2
 together {
-class Together1
-class Together2
-class Together3
+  class Together1
+  class Together2
+  class Together3
 }
 Together1 - Together2
 Together2 - Together3
@@ -1243,18 +1243,18 @@ skinparam pageBorderColor black
 class BaseClass
 
 namespace net.dummy #DDDDDD {
-.BaseClass <|-- Person
-Meeting o-- Person
+    .BaseClass <|-- Person
+    Meeting o-- Person
 
     .BaseClass <|- Meeting
 
 }
 
 namespace net.foo {
-net.dummy.Person  <|- Person
-.BaseClass <|-- Person
+  net.dummy.Person  <|- Person
+  .BaseClass <|-- Person
 
-net.dummy.Meeting o-- Person
+  net.dummy.Meeting o-- Person
 }
 
 BaseClass <|-- net.unused.Person
@@ -1284,10 +1284,10 @@ class A extends B, C {
 *[Ref. [QA-2239](https://forum.plantuml.net/2239/is-multiple-inheritance-or-implementation-possible)]*
 
 
-## Bracketed relations (linking or arrow) style
+## Bracketed relations (linking or arrow) style 
 
 ### Line style
-It's also possible to have explicitly `bold`, `dashed`, `dotted`, `hidden` or `plain` relation, links or arrows:
+It's also possible to have explicitly `bold`, `dashed`, `dotted`, `hidden` or `plain` relation, links or arrows:  
 
 * without label
 
@@ -1423,9 +1423,9 @@ foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
 
 ## Change class color and style (inline style)
 
-You can change the [color](color) or style of individual class using the two following notations:
+You can change the [color](color) or style of individual class using the two following notations: 
 
-* `#color ##[style]color`
+* `#color ##[style]color` 
 
 With background color first (`#color`), then line style and line color (`##[style]color` )
 ```plantuml
@@ -1479,7 +1479,7 @@ class Foo {
 class Bar {
 + field3
 + field4
-  }
+}
 
 Foo::field1 --> Bar::field3 : foo
 Foo::field2 --> Bar::field4 : bar
@@ -1494,16 +1494,16 @@ Foo::field2 --> Bar::field4 : bar
 left to right direction
 
 class User {
-id : INTEGER
-..
-other_id : INTEGER
+  id : INTEGER
+  ..
+  other_id : INTEGER
 }
 
 class Email {
-id : INTEGER
-..
-user_id : INTEGER
-address : INTEGER
+  id : INTEGER
+  ..
+  user_id : INTEGER
+  address : INTEGER
 }
 
 User::id *-- Email::user_id
@@ -1691,7 +1691,7 @@ class1 [Qualifier] - class2
 
 ## Change diagram orientation
 
-You can change (whole) diagram orientation with:
+You can change (whole) diagram orientation with: 
 - `top to bottom direction` _(by default)_
 - `left to right direction`
 
@@ -1717,18 +1717,18 @@ package A {
    class sa3
   }
 }
-
+  
 package B {
-class b1
-class b2
-class b3
-class b4
-class b5
-package sub_b {
-class sb1
-class sb2
-class sb3
-}
+  class b1
+  class b2
+  class b3
+  class b4
+  class b5
+  package sub_b {
+   class sb1
+   class sb2
+   class sb3
+  }
 }
 @enduml
 ```
@@ -1754,18 +1754,18 @@ package A {
    class sa3
   }
 }
-
+  
 package B {
-class b1
-class b2
-class b3
-class b4
-class b5
-package sub_b {
-class sb1
-class sb2
-class sb3
-}
+  class b1
+  class b2
+  class b3
+  class b4
+  class b5
+  package sub_b {
+   class sb1
+   class sb2
+   class sb3
+  }
 }
 @enduml
 ```
@@ -1791,18 +1791,18 @@ package A {
    class sa3
   }
 }
-
+  
 package B {
-class b1
-class b2
-class b3
-class b4
-class b5
-package sub_b {
-class sb1
-class sb2
-class sb3
-}
+  class b1
+  class b2
+  class b3
+  class b4
+  class b5
+  package sub_b {
+   class sb1
+   class sb2
+   class sb3
+  }
 }
 @enduml
 ```
@@ -1827,18 +1827,18 @@ package A {
    class sa3
   }
 }
-
+  
 package B {
-class b1
-class b2
-class b3
-class b4
-class b5
-package sub_b {
-class sb1
-class sb2
-class sb3
-}
+  class b1
+  class b2
+  class b3
+  class b4
+  class b5
+  package sub_b {
+   class sb1
+   class sb2
+   class sb3
+  }
 }
 @enduml
 ```
@@ -1855,4 +1855,5 @@ User "owner which is very long"/1 -- "0..n"/items Item
 ```
 
 *[Ref. [GH-2536](https://github.com/plantuml/plantuml/issues/2536), [GH-2537](https://github.com/plantuml/plantuml/pull/2537)]*
+
 

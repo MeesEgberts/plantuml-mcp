@@ -146,29 +146,29 @@ listsprite
 
 A list of Archimate macros are defined [Archimate-PlantUML](https://github.com/ebbypeter/Archimate-PlantUML) here which simplifies the creation of ArchiMate diagrams, and Archimate is natively on the [Standard Library](stdlib) of PlantUML.
 
-### Archimate elements
+### Archimate elements 
 Using the macros, creation of ArchiMate elements are done using the following format:
 ``Category_ElementName(nameOfTheElement, "description")``
 
 For example:
 * To define a *Stakeholder* element, which is part of Motivation category, the syntax will be  ``Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")``:
-  ```plantuml
-  @startuml
-  !include <archimate/Archimate>
-  Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
-  @enduml
-  ```
+```plantuml
+@startuml
+!include <archimate/Archimate>
+Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
+@enduml
+```
 
 
 * To define a *Business Service* element, ``Business_Service(BService, "Business Service")``:
-  ```plantuml
-  @startuml
-  !include <archimate/Archimate>
-  Business_Service(BService, "Business Service")
-  @enduml
-  ```
+```plantuml
+@startuml
+!include <archimate/Archimate>
+Business_Service(BService, "Business Service")
+@enduml
+```
 
-### Archimate relationships
+### Archimate relationships 
 The ArchiMate relationships are defined with the following pattern:
 ``Rel_RelationType(fromElement, toElement, "description")``
 and to define the direction/orientation of the two elements:
@@ -195,27 +195,27 @@ The `Directions` supported are:
 
 For example:
 * To denote a composition relationship between the *Stakeholder* and *Business Service* defined above, the syntax will be
-  ``Rel_Composition(StakeholderElement, BService, "Description for the relationship")``
-  ```plantuml
-  @startuml
-  !include <archimate/Archimate>
-  Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
-  Business_Service(BService, "Business Service")
-  Rel_Composition(StakeholderElement, BService, "Description for the relationship")
-  @enduml
-  ```
+``Rel_Composition(StakeholderElement, BService, "Description for the relationship")``
+```plantuml
+@startuml
+!include <archimate/Archimate>
+Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
+Business_Service(BService, "Business Service")
+Rel_Composition(StakeholderElement, BService, "Description for the relationship")
+@enduml
+```
 * Unordered List ItemTo orient the two elements in top - down position, the syntax will be
-  ``Rel_Composition_Down(StakeholderElement, BService, "Description for the relationship")``
-  ```plantuml
-  @startuml
-  !include <archimate/Archimate>
-  Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
-  Business_Service(BService, "Business Service")
-  Rel_Composition_Down(StakeholderElement, BService, "Description for the relationship")
-  @enduml
-  ```
+``Rel_Composition_Down(StakeholderElement, BService, "Description for the relationship")``
+```plantuml
+@startuml
+!include <archimate/Archimate>
+Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
+Business_Service(BService, "Business Service")
+Rel_Composition_Down(StakeholderElement, BService, "Description for the relationship")
+@enduml
+```
 
-### Appendice: Examples of all Archimate RelationTypes
+### Appendice: Examples of all Archimate RelationTypes 
 ```plantuml
 @startuml
 left to right direction
@@ -308,3 +308,5 @@ Rel_Access(i4, j4, Access)
 ```
 
 *[Adapted from [Archimate PR#25](https://github.com/plantuml-stdlib/Archimate-PlantUML/pull/25)]*
+
+

@@ -6,7 +6,7 @@ You can use PlantUML to visualize your data.
 
 To activate this feature, the diagram must:
 * begin with `@startjson` keyword
-* end with `@endjson` keyword.
+* end with `@endjson` keyword. 
 
 ```plantuml
 @startjson
@@ -91,7 +91,7 @@ You can use complex JSON structure.
 ```
 
 
-## Using different styles for highlight
+## Using different styles for highlight 
 
 It is possible to have different styles for different highlights.
 
@@ -443,9 +443,9 @@ node      Node
 cloud     Cloud
 
 json JSON {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
 }
 ```
 
@@ -458,11 +458,11 @@ allowmixing
 
 agent Agent
 stack {
-json "JSON_file.json" as J {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
-}
+  json "JSON_file.json" as J {
+    "fruit":"Apple",
+    "size":"Large",
+    "color": ["Red", "Green"]
+  }
 }
 database Database
 
@@ -482,9 +482,9 @@ state "C" as stateC {
 }
 
 json J {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
 }
 ```
 
@@ -533,4 +533,5 @@ You can use [Creole or HTML Creole](creole) on JSON diagram:
 }
 @endjson
 ```
+
 

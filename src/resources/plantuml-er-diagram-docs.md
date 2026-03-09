@@ -56,19 +56,19 @@ Birthplace -1- Location
 @startchen
 
 entity DIRECTOR {
-Name {
-Fname
-Lname
-}
-Born
-Died
-Age
+  Name {
+    Fname
+    Lname
+  }
+  Born
+  Died
+  Age
 }
 
 entity MOVIE {
-Title
-Released
-Code
+  Title
+  Released
+  Code
 }
 
 @endchen
@@ -80,20 +80,20 @@ Attributes can be *keys*, meaning that their value is unique among entities of a
 @startchen
 
 entity DIRECTOR {
-Number : INTEGER <<key>>
-Name {
-Fname : STRING
-Lname : STRING
-}
-Born : DATE
-Died : DATE
-Age : INTEGER
+  Number : INTEGER <<key>>
+  Name {
+    Fname : STRING
+    Lname : STRING
+  }
+  Born : DATE
+  Died : DATE
+  Age : INTEGER
 }
 
 entity CUSTOMER {
-Number : INTEGER <<key>>
-Bonus : REAL <<derived>>
-Name : STRING <<multi>>
+  Number : INTEGER <<key>>
+  Bonus : REAL <<derived>>
+  Name : STRING <<multi>>
 }
 
 @endchen
@@ -108,16 +108,16 @@ Name : STRING <<multi>>
 @startchen
 
 entity CUSTOMER {
-Number <<key>>
-Name
+  Number <<key>>
+  Name
 }
 
 entity MOVIE {
-Code <<key>>
+  Code <<key>>
 }
 
 relationship RENTED_TO {
-Date
+  Date
 }
 
 RENTED_TO =1= CUSTOMER
@@ -132,21 +132,21 @@ Relationships are not limited to two entities.
 @startchen
 
 entity CUSTOMER {
-Number <<key>>
-Name
+  Number <<key>>
+  Name
 }
 
 entity MOVIE {
-Code <<key>>
+  Code <<key>>
 }
 
 entity INVOICE {
-Number <<key>>
-Amount
+  Number <<key>>
+  Amount
 }
 
 relationship RENTED_TO {
-Date
+  Date
 }
 
 RENTED_TO =1= CUSTOMER
@@ -170,16 +170,16 @@ The cardinality of relationships can also be expressed as a range.
 @startchen
 
 entity CUSTOMER {
-Number <<key>>
-Name
+  Number <<key>>
+  Name
 }
 
 entity MOVIE {
-Code <<key>>
+  Code <<key>>
 }
 
 relationship RENTED_TO {
-Date
+  Date
 }
 
 RENTED_TO -(1,N)- CUSTOMER
@@ -197,13 +197,13 @@ A *weak* entity does not have a key attribute that uniquely identifies each inst
 @startchen
 
 entity PARENT {
-Number <<key>>
-Name
+  Number <<key>>
+  Name
 }
 
 entity CHILD <<weak>> {
-Name <<key>>
-Age
+  Name <<key>>
+  Age
 }
 
 relationship PARENT_OF <<identifying>> {
@@ -223,17 +223,17 @@ Entities, attributes and relationships can be given aliases to make the diagram 
 @startchen
 
 entity "Customer" as CUSTOMER {
-"customer number" as Number <<key>>
-"member bonus" as Bonus <<derived>>
-"first and last names" as Name <<multi>>
+  "customer number" as Number <<key>>
+  "member bonus" as Bonus <<derived>>
+  "first and last names" as Name <<multi>>
 }
 
 entity "Movie" as MOVIE {
-"barcode" as Code
+  "barcode" as Code
 }
 
 relationship "was-rented-to" as RENTED_TO {
-"date rented" as Date
+  "date rented" as Date
 }
 
 RENTED_TO -1- CUSTOMER
@@ -401,4 +401,5 @@ entity "Human" as PERSON {
 PERSON ->- U { CUSTOMER, DIRECTOR }
 @endchen
 ```
+
 

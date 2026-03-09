@@ -164,16 +164,16 @@ class Car {
 Object <|-- Foo
 
 class Foo {
-+ Object[]   [[[http://www.google.com]]]
-+ methods1() [[[http://www.yahoo.com/A1{Some explainations about this method}]]]
-+ methods2() [[[http://www.yahoo.com/A2]]]
+  + Object[]   [[[http://www.google.com]]]
+  + methods1() [[[http://www.yahoo.com/A1{Some explainations about this method}]]]
+  + methods2() [[[http://www.yahoo.com/A2]]]
 }
-
+  
 class Foo2 {
-+ methods1() [[[http://www.yahoo.com/B1]]]
-+ methods2() [[[http://www.yahoo.com/B2]]]
+  + methods1() [[[http://www.yahoo.com/B1]]]
+  + methods2() [[[http://www.yahoo.com/B2]]]
 }
-
+  
 class Object [[http://www.yahoo.com]]
 @enduml
 ```
@@ -208,7 +208,7 @@ end
 ## Link in State diagram
 
 You can add link on State diagram:
-- local link on a word
+- local link on a word 
 - or link on the entire state shape
 
 ```plantuml
@@ -243,7 +243,7 @@ nwdiag {
 ```
 
 
-## Links in JSON/YAML diagram
+## Links in JSON/YAML diagram 
 
 ### JSON
 ```plantuml
@@ -268,7 +268,7 @@ Appli.: A [[http://plantuml.com link]] on YAML
 
 ## Links in notes
 
-It is also possible to specify a link at the beginning of a note (the link applies to the full note), or inside a note (for a portion of the note).
+It is also possible to specify a link at the beginning of a note (the link applies to the full note), or inside a note (for a portion of the note). 
 ```plantuml
 @startuml
 :Foo:
@@ -371,7 +371,7 @@ See Wanted features [QA-6397](https://forum.plantuml.net/6397)
 [[#FFD700#FIXME]]
 ```plantuml
 @startuml
-node Car
+node Car 
 Car *-- Wheel [[http://plantuml.com/deployment-diagram]] : has some
 @enduml
 ```
@@ -383,7 +383,7 @@ Car *-- Wheel [[http://plantuml.com/deployment-diagram]] : has some
 ### State diagram
 
 [[#FFD700#FIXME]] 🚩
-Same Issue
+Same Issue 
 [[#FFD700#FIXME]]
 ```plantuml
 @startuml
@@ -396,7 +396,7 @@ Car -> CarWithWheel [[http://plantuml.com/state-diagram]] : Add wheel to car
 
 ## Specific SkinParameter for Link
 
-### hyperlinkColor
+### hyperlinkColor 
 
 You can change the ``color`` value of the links with the ``hyperlinkColor`` setting.
 
@@ -417,7 +417,7 @@ skinparam hyperlinkColor red
 
 *[Ref. [QA-2322](https://forum.plantuml.net/2322/increasing-visibility-of-links)]*
 
-### hyperlinkUnderline
+### hyperlinkUnderline 
 
 You can use ``hyperlinkUnderline`` to specify the presence and (in PNG only) thickness of hyperlink underlines.
 
@@ -445,7 +445,7 @@ skinparam hyperlinkUnderline 5
 
 *[Ref. [QA-2866](https://forum.plantuml.net/2866), [QA-15114](https://forum.plantuml.net/15114), [GH-1241](https://github.com/plantuml/plantuml/issues/1241), [GH-1411](https://github.com/plantuml/plantuml/issues/1411)]*
 
-### topurl
+### topurl 
 
 You can use `topurl` setting, in order to define the prefix for all the links on a PlantUML diagram, as:
 
@@ -455,12 +455,12 @@ You can use `topurl` setting, in order to define the prefix for all the links on
 skinparam topurl https://plantuml.com/
 
 * [[index PlantUML website]]
-  ** [[sequence-diagram Sequence]]
-  ** [[mindmap-diagram MindMap]]
-  ** [[wbs-diagram WBS]]
-  ** ...
-  @endmindmap
-  ```
+** [[sequence-diagram Sequence]]
+** [[mindmap-diagram MindMap]]
+** [[wbs-diagram WBS]]
+** ...
+@endmindmap
+```
 
 *[Ref. [QA-9016](https://forum.plantuml.net/9016/dashed-vs-solid-lines-in-sequence-diagrams?show=9023#c9023), [QA-13179](https://forum.plantuml.net/13179/how-the-skinparam-topurl-works-url-links) ]*
 
@@ -477,19 +477,19 @@ You can see also on:
 @startuml
 title test on HyperlinkColor [[test link]]
 
-class test <<normal>> {
-* aaa
-+ [[normal model]]
-- bb
-  }
-
-class test_with_stereo AS "[[http://www.plantuml.com test]]" <<red>> {
-* aaa
-+ [[red model]]
-- bb
-  }
-  @enduml
-  ```
+ class test <<normal>> {
+  * aaa
+  + [[normal model]]
+  - bb
+ }
+ 
+  class test_with_stereo AS "[[http://www.plantuml.com test]]" <<red>> {
+  * aaa
+  + [[red model]]
+  - bb
+ }
+@enduml
+```
 
 
 ### With style
@@ -506,19 +506,20 @@ You can use [style](style-evolution) to change rendering of elements.
 
 title test on HyperlinkColor [[test link]]
 
-class test <<normal>> {
-* aaa
-+ [[normal model]]
-- bb
-  }
-
-class test_with_stereo AS "[[http://www.plantuml.com test]]" <<red>> {
-* aaa
-+ [[red model]]
-- bb
-  }
-  @enduml
-  ```
+ class test <<normal>> {
+  * aaa
+  + [[normal model]]
+  - bb
+ }
+ 
+  class test_with_stereo AS "[[http://www.plantuml.com test]]" <<red>> {
+  * aaa
+  + [[red model]]
+  - bb
+ }
+@enduml
+```
 
 *[Ref. [QA-8071](https://forum.plantuml.net/8071/)]*
+
 

@@ -124,7 +124,7 @@ actor actor1
 
 **NB**: *There is an old syntax for actor with guillemet which is now deprecated and will be removed some days. Please do not use in your diagram.*
 
-### Component
+### Component 
 ```plantuml
 @startuml
 
@@ -134,7 +134,7 @@ component component1
 @enduml
 ```
 
-### Interface
+### Interface 
 ```plantuml
 @startuml
 
@@ -145,7 +145,7 @@ label "//interface example//"
 @enduml
 ```
 
-### Usecase
+### Usecase 
 ```plantuml
 @startuml
 
@@ -227,16 +227,16 @@ actor foo1
 actor foo2
 foo1 <-0-> foo2
 foo1 <-(0)-> foo2
-
+ 
 (ac1) -le(0)-> left1
 ac1 -ri(0)-> right1
 ac1 .up(0).> up1
 ac1 ~up(0)~> up2
 ac1 -do(0)-> down1
 ac1 -do(0)-> down2
-
+ 
 actor1 -0)- actor2
-
+ 
 component comp1
 component comp2
 comp1 *-0)-+ comp2
@@ -263,12 +263,12 @@ comp1 #~~( interf1
 ⎘ See all type on **Appendix**.
 
 
-## Bracketed arrow style
+## Bracketed arrow style 
 
 *Similar as [Bracketed **class** relations (linking or arrow) style](class-diagram#chjviqthvhkikfmwbahk)*
 
 ### Line style
-It's also possible to have explicitly `bold`, `dashed`, `dotted`, `hidden` or `plain`  arrows:
+It's also possible to have explicitly `bold`, `dashed`, `dotted`, `hidden` or `plain`  arrows:  
 
 * without label
 
@@ -371,7 +371,7 @@ foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
 
 ## Change element color and style (inline style)
 
-You can change the [color](color) or style of individual element using the following notation:
+You can change the [color](color) or style of individual element using the following notation: 
 * `#[color|back:color];line:color;line.[bold|dashed|dotted];text:color`
 
 ```plantuml
@@ -400,7 +400,7 @@ node  n #aliceblue;line:blue;line.dotted;text:blue
 @enduml
 ```
 
-*[Ref. [QA-6852](https://forum.plantuml.net/6852)]*
+*[Ref. [QA-6852](https://forum.plantuml.net/6852)]* 
 
 
 ## Nestable elements
@@ -508,17 +508,17 @@ artifact Foo1 {
 }
 
 folder Foo3 {
-artifact Foo4
+  artifact Foo4
 }
 
 frame Foo5 {
-database Foo6
+  database Foo6
 }
 
 cloud vpc {
-node ec2 {
-stack stack
-}
+  node ec2 {
+    stack stack
+  }
 }
 
 @enduml
@@ -531,15 +531,15 @@ node Foo1 {
 }
 
 cloud Foo3 {
-frame Foo4
+  frame Foo4
 }
 
 database Foo5  {
-storage Foo6
+  storage Foo6
 }
 
 storage Foo7 {
-storage Foo8
+  storage Foo8
 }
 @enduml
 ```
@@ -548,87 +548,87 @@ storage Foo8
 
 Here is all the nested elements:
 * by alphabetical order:
-  ```plantuml
-  @startuml
-  action action {
-  artifact artifact {
-  card card {
-  cloud cloud {
-  component component {
-  database database {
-  file file {
-  folder folder {
-  frame frame {
-  hexagon hexagon {
-  node node {
-  package package {
-  process process {
-  queue queue {
-  rectangle rectangle {
-  stack stack {
-  storage storage {
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  @enduml
-  ```
+```plantuml
+@startuml
+action action {
+artifact artifact {
+card card {
+cloud cloud {
+component component {
+database database {
+file file {
+folder folder {
+frame frame {
+hexagon hexagon {
+node node {
+package package {
+process process {
+queue queue {
+rectangle rectangle {
+stack stack {
+storage storage {
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+@enduml
+```
 
 * or reverse alphabetical order
-  ```plantuml
-  @startuml
-  storage storage {
-  stack stack {
-  rectangle rectangle {
-  queue queue {
-  process process {
-  package package {
-  node node {
-  hexagon hexagon {
-  frame frame {
-  folder folder {
-  file file {
-  database database {
-  component component {
-  cloud cloud {
-  card card {
-  artifact artifact {
-  action action {
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  }
-  @enduml
-  ```
+```plantuml
+@startuml
+storage storage {
+stack stack {
+rectangle rectangle {
+queue queue {
+process process {
+package package {
+node node {
+hexagon hexagon {
+frame frame {
+folder folder {
+file file {
+database database {
+component component {
+cloud cloud {
+card card {
+artifact artifact {
+action action {
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+@enduml
+```
 
 
-## Alias
+## Alias 
 
 ### Simple alias with `as`
 
@@ -732,7 +732,7 @@ rectangle "Another rectangle"
 
 ## Specific SkinParameter
 
-### roundCorner
+### roundCorner 
 ```plantuml
 @startuml
 skinparam roundCorner 15
@@ -1589,9 +1589,9 @@ node      Node
 cloud     Cloud
 
 json JSON {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
 }
 ```
 
@@ -1629,12 +1629,12 @@ stereotype      stereotype
 struct          struct
 object          object
 map map {
-key => value
+ key => value
 }
 json JSON {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
 }
 action action
 actor actor
@@ -1762,7 +1762,7 @@ f1 --> po1
 
 ## Change diagram orientation
 
-You can change (whole) diagram orientation with:
+You can change (whole) diagram orientation with: 
 - `top to bottom direction` _(by default)_
 - `left to right direction`
 
@@ -1788,18 +1788,18 @@ package A {
    card sa3
   }
 }
-
+  
 package B {
-card b1
-card b2
-card b3
-card b4
-card b5
-package sub_b {
-card sb1
-card sb2
-card sb3
-}
+  card b1
+  card b2
+  card b3
+  card b4
+  card b5
+  package sub_b {
+   card sb1
+   card sb2
+   card sb3
+  }
 }
 @enduml
 ```
@@ -1825,18 +1825,18 @@ package A {
    card sa3
   }
 }
-
+  
 package B {
-card b1
-card b2
-card b3
-card b4
-card b5
-package sub_b {
-card sb1
-card sb2
-card sb3
-}
+  card b1
+  card b2
+  card b3
+  card b4
+  card b5
+  package sub_b {
+   card sb1
+   card sb2
+   card sb3
+  }
 }
 @enduml
 ```
@@ -1862,18 +1862,18 @@ package A {
    card sa3
   }
 }
-
+  
 package B {
-card b1
-card b2
-card b3
-card b4
-card b5
-package sub_b {
-card sb1
-card sb2
-card sb3
-}
+  card b1
+  card b2
+  card b3
+  card b4
+  card b5
+  package sub_b {
+   card sb1
+   card sb2
+   card sb3
+  }
 }
 @enduml
 ```
@@ -1898,18 +1898,20 @@ package A {
    card sa3
   }
 }
-
+  
 package B {
-card b1
-card b2
-card b3
-card b4
-card b5
-package sub_b {
-card sb1
-card sb2
-card sb3
-}
+  card b1
+  card b2
+  card b3
+  card b4
+  card b5
+  package sub_b {
+   card sb1
+   card sb2
+   card sb3
+  }
 }
 @enduml
 ```
+
+

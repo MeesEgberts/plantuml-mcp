@@ -19,7 +19,8 @@
     "plantuml-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "fetch:plantuml-docs": "scripts/fetch-plantuml-docs.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",

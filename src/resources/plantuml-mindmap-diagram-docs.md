@@ -52,12 +52,12 @@ You can use [Markdown list](https://daringfireball.net/projects/markdown/syntax#
 ```plantuml
 @startmindmap
 * root node
-    * some first level node
-        * second level node
-        * another second level node
-    * another first level node
-      @endmindmap
-      ```
+	* some first level node
+		* second level node
+		* another second level node
+	* another first level node
+@endmindmap
+```
 
 
 ## Arithmetic notation
@@ -153,41 +153,41 @@ It is possible to change node [color](color).
 ### With inline color
 
 * OrgMode syntax mindmap
-  ```plantuml
-  @startmindmap
-  *[#Orange] Colors
-  **[#lightgreen] Green
-  **[#FFBBCC] Rose
-  **[#lightblue] Blue
-  @endmindmap
-  ```
+```plantuml
+@startmindmap
+*[#Orange] Colors
+**[#lightgreen] Green
+**[#FFBBCC] Rose
+**[#lightblue] Blue
+@endmindmap
+```
 
 * Arithmetic notation syntax mindmap
-  ```plantuml
-  @startmindmap
-  +[#Orange] Colors
-  ++[#lightgreen] Green
-  ++[#FFBBCC] Rose
-  --[#lightblue] Blue
-  @endmindmap
-  ```
+```plantuml
+@startmindmap
++[#Orange] Colors
+++[#lightgreen] Green
+++[#FFBBCC] Rose
+--[#lightblue] Blue
+@endmindmap
+```
 
 * Markdown syntax mindmap
-  ```plantuml
-  @startmindmap
-  *[#Orange] root node
-  *[#lightgreen] some first level node
+```plantuml
+@startmindmap
+*[#Orange] root node
+ *[#lightgreen] some first level node
   *[#FFBBCC] second level node
   *[#lightblue] another second level node
-  *[#lightgreen] another first level node
-  @endmindmap
-  ```
+ *[#lightgreen] another first level node
+@endmindmap
+```
 
 ### With style color
 
 * OrgMode syntax mindmap
-  ```plantuml
-  @startmindmap
+```plantuml
+@startmindmap
 <style>
 mindmapDiagram {
   .green {
@@ -202,15 +202,15 @@ mindmapDiagram {
 }
 </style>
 * Colors
-  ** Green <<green>>
-  ** Rose <<rose>>
-  ** Blue <<your_style_name>>
-  @endmindmap
-  ```
+** Green <<green>>
+** Rose <<rose>>
+** Blue <<your_style_name>>
+@endmindmap
+```
 
 * Arithmetic notation syntax mindmap
-  ```plantuml
-  @startmindmap
+```plantuml
+@startmindmap
 <style>
 mindmapDiagram {
   .green {
@@ -225,15 +225,15 @@ mindmapDiagram {
 }
 </style>
 + Colors
-  ++ Green <<green>>
-  ++ Rose <<rose>>
-  -- Blue <<your_style_name>>
-  @endmindmap
-  ```
+++ Green <<green>>
+++ Rose <<rose>>
+-- Blue <<your_style_name>>
+@endmindmap
+```
 
 * Markdown syntax mindmap
-  ```plantuml
-  @startmindmap
+```plantuml
+@startmindmap
 <style>
 mindmapDiagram {
   .green {
@@ -248,12 +248,12 @@ mindmapDiagram {
 }
 </style>
 * root node
-* some first level node <<green>>
-* second level node <<rose>>
-* another second level node <<your_style_name>>
-* another first level node <<green>>
-  @endmindmap
-  ```
+ * some first level node <<green>>
+  * second level node <<rose>>
+  * another second level node <<your_style_name>>
+ * another first level node <<green>>
+@endmindmap
+```
 
 * Apply style to a branch
 
@@ -346,7 +346,7 @@ left side
 
 ## Change (whole) diagram orientation
 
-You can change (whole) diagram orientation with:
+You can change (whole) diagram orientation with: 
 - `left to right direction` _(by default)_
 - `top to bottom direction`
 - `right to left direction`
@@ -423,17 +423,17 @@ caption figure 1
 title My super title
 
 * <&flag>Debian
-  ** <&globe>Ubuntu
-  *** Linux Mint
-  *** Kubuntu
-  *** Lubuntu
-  *** KDE Neon
-  ** <&graph>LMDE
-  ** <&pulse>SolydXK
-  ** <&people>SteamOS
-  ** <&star>Raspbian with a very long name
-  *** <s>Raspmbc</s> => OSMC
-  *** <s>Raspyfi</s> => Volumio
+** <&globe>Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** <&graph>LMDE
+** <&pulse>SolydXK
+** <&people>SteamOS
+** <&star>Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
 
 header
 My super header
@@ -442,8 +442,8 @@ endheader
 center footer My super footer
 
 legend right
-Short
-legend
+  Short
+  legend
 endlegend
 @endmindmap
 ```
@@ -543,10 +543,10 @@ arrow {
 </style>
 
 * Hi =)
-  ** sometimes i have node in wich i want to write a long text
-  *** this results in really huge diagram
-  **** of course, i can explicit split with a\nnew line
-  **** but it could be cool if PlantUML was able to split long lines, maybe with an option
+** sometimes i have node in wich i want to write a long text
+*** this results in really huge diagram
+**** of course, i can explicit split with a\nnew line
+**** but it could be cool if PlantUML was able to split long lines, maybe with an option 
 
 @endmindmap
 ```
@@ -624,4 +624,5 @@ Enjoy!;
 ```
 
 *[Ref. [QA-17838](https://forum.plantuml.net/17838/is-it-possible-to-add-custom-images-in-mindmap)]*
+
 

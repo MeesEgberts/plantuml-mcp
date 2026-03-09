@@ -103,16 +103,16 @@ Labels can be provided using parentheses.
 
 The 3 syntaxes are possible:
 * ``if (...) then (...) ... [else (...) ...] endif``
-  ```plantuml
-  @startuml
+```plantuml
+@startuml
 
 start
 
 if (Graphviz installed?) then (yes)
-:process all\ndiagrams;
+  :process all\ndiagrams;
 else (no)
-:process only
-__sequence__ and __activity__ diagrams;
+  :process only
+  __sequence__ and __activity__ diagrams;
 endif
 
 stop
@@ -121,26 +121,26 @@ stop
 ```
 
 * ``if (...) is (...) then ... [else (...) ...] endif``
-  ```plantuml
-  @startuml
-  if (color?) is (<color:red>red) then
-  :print red;
-  else
-  :print not red;
-  endif
-  @enduml
-  ```
+```plantuml
+@startuml
+if (color?) is (<color:red>red) then
+:print red;
+else 
+:print not red;
+endif
+@enduml
+```
 
 * ``if (...) equals (...) then ... [else (...) ...] endif``
-  ```plantuml
-  @startuml
-  if (counter?) equals (5) then
-  :print 5;
-  else
-  :print not 5;
-  endif
-  @enduml
-  ```
+```plantuml
+@startuml
+if (counter?) equals (5) then
+:print 5;
+else 
+:print not 5;
+endif
+@enduml
+```
 
 *[Ref. [QA-301](https://forum.plantuml.net/301/activity-diagram-beta?show=302#a302)]*
 
@@ -233,8 +233,8 @@ You can stop action on a if loop.
 ```plantuml
 @startuml
 if (condition?) then
-:error;
-stop
+  :error;
+  stop
 endif
 :action; <<#palegreen>>
 @enduml
@@ -243,28 +243,28 @@ endif
 But if you want to stop at the precise action, you can use the `kill` or `detach` keyword:
 
 * `kill`
-  ```plantuml
-  @startuml
-  if (condition?) then
+```plantuml
+@startuml
+if (condition?) then
   :error; <<#pink>>
   kill
-  endif
-  :action; <<#palegreen>>
-  @enduml
-  ```
+endif
+:action; <<#palegreen>>
+@enduml
+```
 
 *[Ref. [QA-265](https://forum.plantuml.net/265/new-activity-diagram-syntax-direction-of-links?show=306#a306)]*
 
 * `detach`
-  ```plantuml
-  @startuml
-  if (condition?) then
+```plantuml
+@startuml
+if (condition?) then
   :error; <<#pink>>
   detach
-  endif
-  :action; <<#palegreen>>
-  @enduml
-  ```
+endif
+:action; <<#palegreen>>
+@enduml
+```
 
 
 ## Repeat loop
@@ -279,8 +279,8 @@ You can use ``repeat`` and ``repeat while`` keywords to have repeat loops.
 start
 
 repeat
-:read data;
-:generate diagrams;
+  :read data;
+  :generate diagrams;
 repeat while (more data?) is (yes) not (no)
 
 stop
@@ -298,8 +298,8 @@ It is also possible to use a full action as ``repeat`` target and insert an acti
 start
 
 repeat :foo as starting label;
-:read data;
-:generate diagrams;
+  :read data;
+  :generate diagrams;
 backward:This is backward;
 repeat while (more data?) is (yes)
 ->no;
@@ -318,13 +318,13 @@ You can use the ``break`` keyword after an action on a loop.
 @startuml
 start
 repeat
-:Test something;
-if (Something went wrong?) then (no)
-:OK; <<#palegreen>>
-break
-endif
-->NOK;
-:Alert "Error with long text";
+  :Test something;
+    if (Something went wrong?) then (no)
+      :OK; <<#palegreen>>
+      break
+    endif
+    ->NOK;
+    :Alert "Error with long text";
 repeat while (Something went wrong with long text?) is (yes) not (no)
 ->//merged step//;
 :Alert "Success";
@@ -382,8 +382,8 @@ You can use ``while`` and ``endwhile`` keywords to have while loop.
 start
 
 while (data available?)
-:read data;
-:generate diagrams;
+  :read data;
+  :generate diagrams;
 endwhile
 
 stop
@@ -534,14 +534,14 @@ stop
 start
 
 if (multiprocessor?) then (yes)
-fork
-:Treatment 1;
-fork again
-:Treatment 2;
-end fork
+  fork
+    :Treatment 1;
+  fork again
+    :Treatment 2;
+  end fork
 else (monoproc)
-:Treatment 1;
-:Treatment 2;
+  :Treatment 1;
+  :Treatment 2;
 endif
 
 @enduml
@@ -576,14 +576,14 @@ You can use `hidden` arrows to make an input split (multi-start):
 ```plantuml
 @startuml
 split
--[hidden]->
-:A;
+   -[hidden]->
+   :A;
 split again
--[hidden]->
-:B;
+   -[hidden]->
+   :B;
 split again
--[hidden]->
-:C;
+   -[hidden]->
+   :C;
 end split
 :D;
 @enduml
@@ -661,13 +661,13 @@ start
 floating note left: This is a note
 :foo2;
 note right
-This note is on several
-//lines// and can
-contain <b>HTML</b>
-====
-* Calling the method ""foo()"" is prohibited
-  end note
-  stop
+  This note is on several
+  //lines// and can
+  contain <b>HTML</b>
+  ====
+  * Calling the method ""foo()"" is prohibited
+end note
+stop
 
 @enduml
 ```
@@ -694,14 +694,14 @@ You can add note on partition activity:
 @startuml
 start
 partition "**process** HelloWorld" {
-note
-This is my note
-----
-//Creole test//
-end note
-:Ready;
-:HelloWorld(i); <<output>>
-:Hello-Sent;
+    note
+        This is my note
+        ----
+        //Creole test//
+    end note
+    :Ready;
+    :HelloWorld(i); <<output>>
+    :Hello-Sent;
 }
 @enduml
 ```
@@ -729,7 +729,7 @@ You can also use [gradient color](color).
 @startuml
 start
 partition #red/white testPartition {
-:testActivity; <<#blue\green>>
+        :testActivity; <<#blue\green>>
 }
 @enduml
 ```
@@ -931,12 +931,12 @@ You can group activity together by defining group:
 @startuml
 start
 group Initialization {
-:read config file;
-:init internal variable;
+    :read config file;
+    :init internal variable;
 }
 group Running group {
-:wait for user interaction;
-:print information;
+    :wait for user interaction;
+    :print information;
 }
 
 stop
@@ -987,8 +987,8 @@ It's also possible to add [link](link) to partition:
 @startuml
 start
 partition "[[http://plantuml.com partition_name]]" {
-:read doc. on [[http://plantuml.com plantuml_website]];
-:test diagram;
+    :read doc. on [[http://plantuml.com plantuml_website]];
+    :test diagram;
 }
 end
 @enduml
@@ -1002,31 +1002,31 @@ You can group activity together by defining:
 * package;
 * rectangle;
 * card.
-  ```plantuml
-  @startuml
-  start
-  group Group {
+```plantuml
+@startuml
+start
+group Group {
   :Activity;
-  }
-  floating note: Note on Group
+}
+floating note: Note on Group
 
 partition Partition {
-:Activity;
+  :Activity;
 }
 floating note: Note on Partition
 
 package Package {
-:Activity;
+  :Activity;
 }
-floating note: Note on Package
+floating note: Note on Package 
 
 rectangle Rectangle {
-:Activity;
+  :Activity;
 }
-floating note: Note on Rectangle
+floating note: Note on Rectangle 
 
 card Card {
-:Activity;
+  :Activity;
 }
 floating note: Note on Card
 end
@@ -1284,12 +1284,12 @@ start
 :ClickServlet.handleRequest();
 :new page;
 if (Page.onSecurityCheck) then (true)
-:Page.onInit();
-if (isForward?) then (no)
-:Process controls;
-if (continue processing?) then (no)
-stop
-endif
+  :Page.onInit();
+  if (isForward?) then (no)
+    :Process controls;
+    if (continue processing?) then (no)
+      stop
+    endif
 
     if (isPost?) then (yes)
       :Page.onPost();
@@ -1297,18 +1297,18 @@ endif
       :Page.onGet();
     endif
     :Page.onRender();
-endif
+  endif
 else (false)
 endif
 
 if (do redirect?) then (yes)
-:redirect process;
+  :redirect process;
 else
-if (do forward?) then (yes)
-:Forward request;
-else (no)
-:Render page template;
-endif
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+  endif
 endif
 
 stop
@@ -1317,7 +1317,7 @@ stop
 ```
 
 
-## Condition Style
+## Condition Style 
 
 ### Inside style (by default)
 ```plantuml
@@ -1342,7 +1342,7 @@ repeatwhile (<b>end)
 @enduml
 ```
 
-### Diamond style
+### Diamond style 
 ```plantuml
 @startuml
 skinparam conditionStyle diamond
@@ -1357,7 +1357,7 @@ repeatwhile (<b>end)
 
 
 
-### InsideDiamond (or *Foo1*) style
+### InsideDiamond (or *Foo1*) style 
 ```plantuml
 @startuml
 skinparam conditionStyle InsideDiamond
@@ -1385,66 +1385,66 @@ repeatwhile (<b>end)
 *[Ref. [QA-1290](https://forum.plantuml.net/1290/plantuml-condition-rendering) and [#400](https://github.com/plantuml/plantuml/issues/400#issuecomment-721287124)]*
 
 
-## Condition End Style
+## Condition End Style 
 
 ### Diamond style (by default)
 
 * With one branch
-  ```plantuml
-  @startuml
-  skinparam ConditionEndStyle diamond
-  :A;
-  if (decision) then (yes)
-  :B1;
-  else (no)
-  endif
-  :C;
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+```
 
 * With two branches (`B1`, `B2`)
-  ```plantuml
-  @startuml
-  skinparam ConditionEndStyle diamond
-  :A;
-  if (decision) then (yes)
-  :B1;
-  else (no)
-  :B2;
-  endif
-  :C;
-  @enduml
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+```
 
-### Horizontal line (hline) style
+### Horizontal line (hline) style 
 * With one branch
-  ```plantuml
-  @startuml
-  skinparam ConditionEndStyle hline
-  :A;
-  if (decision) then (yes)
-  :B1;
-  else (no)
-  endif
-  :C;
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+```
 
 * With two branches (`B1`, `B2`)
-  ```plantuml
-  @startuml
-  skinparam ConditionEndStyle hline
-  :A;
-  if (decision) then (yes)
-  :B1;
-  else (no)
-  :B2;
-  endif
-  :C;
-  @enduml
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+```
 
 
 *[Ref. [QA-4015](https://forum.plantuml.net/4015/its-possible-to-draw-if-else-endif-without-merge-symbol)]*
@@ -1486,32 +1486,32 @@ activityDiagram {
   FontColor #888
   FontName arial
 
-diamond {
-BackgroundColor #ccf
-LineColor #00FF00
-FontColor green
-FontName arial
-FontSize 15
-}
-arrow {
-FontColor gold
-FontName arial
-FontSize 15
-}
-partition {
-LineColor red
-FontColor green
-RoundCorner 10
-BackgroundColor PeachPuff
-}
-note {
-FontColor Blue
-LineColor Navy
-BackgroundColor #ccf
-}
+  diamond {
+    BackgroundColor #ccf
+    LineColor #00FF00
+    FontColor green
+    FontName arial
+    FontSize 15
+  }
+  arrow {
+    FontColor gold
+    FontName arial
+    FontSize 15
+  }
+  partition {
+    LineColor red
+    FontColor green
+    RoundCorner 10
+    BackgroundColor PeachPuff
+  }
+  note {
+    FontColor Blue
+    LineColor Navy
+    BackgroundColor #ccf
+  }
 }
 document {
-BackgroundColor transparent
+   BackgroundColor transparent
 }
 </style>
 start
@@ -1519,7 +1519,7 @@ start
 -> test of color;
 if (color?) is (<color:red>red) then
 :print red;
-else
+else 
 :print not red;
 note right: no color
 endif
@@ -1568,3 +1568,5 @@ You can use [Creole or HTML Creole](creole) on Activity diagram:
   <img:https://plantuml.com/logo3.png>;
 @enduml
 ```
+
+

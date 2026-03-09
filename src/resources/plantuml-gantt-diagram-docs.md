@@ -11,9 +11,9 @@ In the context of creating Gantt Charts, **PlantUML** offers several advantages.
 
 The Gantt is described in *natural* language, using very simple sentences (subject-verb-complement).
 
-Tasks defined using square bracket.
+Tasks defined using square bracket. 
 
-### Workload
+### Workload 
 
 The workload for each task is specified using the ``requires`` verb, indicating the amount of work needed in terms of days.
 
@@ -197,7 +197,7 @@ It is also possible to customize [colors](color) with ``is colored in``.
 ### Adding completion depending percentage
 You can set the completion status of a task, by the command:
 * ``is xx% completed``
-* ``is xx% complete``
+* ``is xx% complete`` 
 
 ```plantuml
 @startgantt
@@ -382,7 +382,7 @@ You can change scale for very long project, with one of those parameters:
 * printscale
 * ganttscale
 * projectscale
-  and one of the values:
+and one of the values:
 * daily *(by default)*
 * weekly
 * monthly
@@ -404,7 +404,7 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -422,7 +422,7 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -436,7 +436,7 @@ Project starts the 20th of september 2020
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -451,7 +451,7 @@ Project starts the 20th of september 2020
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -467,7 +467,7 @@ Project starts the 20th of september 2020
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -480,7 +480,7 @@ Project starts the 1st of october 2020
 [Testing] requires 200 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
@@ -494,7 +494,7 @@ Project starts the 1st of october 2020
 [Testing] requires 200 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
@@ -512,7 +512,7 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -530,7 +530,7 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -542,11 +542,11 @@ You can change zoom, with the parameter:
 
 ### Zoom on daily (default) scale
 * Without zoom
-  ```plantuml
-  @startgantt
-  printscale daily
-  saturday are closed
-  sunday are closed
+```plantuml
+@startgantt
+printscale daily
+saturday are closed
+sunday are closed
 
 Project starts the 1st of january 2021
 [Prototype design end] as [TASK1] requires 8 days
@@ -555,16 +555,16 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 * With zoom
-  ```plantuml
-  @startgantt
-  printscale daily zoom 2
-  saturday are closed
-  sunday are closed
+```plantuml
+@startgantt
+printscale daily zoom 2
+saturday are closed
+sunday are closed
 
 Project starts the 1st of january 2021
 [Prototype design end] as [TASK1] requires 8 days
@@ -573,18 +573,18 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 *[Ref. [QA-13725](https://forum.plantuml.net/13725/gantt-add-zoom-for-daily-scale)]*
 
 ### Zoom on weekly scale
 * Without zoom
-  ```plantuml
-  @startgantt
-  printscale weekly
-  saturday are closed
-  sunday are closed
+```plantuml
+@startgantt
+printscale weekly
+saturday are closed
+sunday are closed
 
 Project starts the 1st of january 2021
 [Prototype design end] as [TASK1] requires 19 days
@@ -593,16 +593,16 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 * With zoom
-  ```plantuml
-  @startgantt
-  printscale weekly zoom 4
-  saturday are closed
-  sunday are closed
+```plantuml
+@startgantt
+printscale weekly zoom 4
+saturday are closed
+sunday are closed
 
 Project starts the 1st of january 2021
 [Prototype design end] as [TASK1] requires 19 days
@@ -611,99 +611,99 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 ### Zoom on monthly scale
 * Without zoom
-  ```plantuml
-  @startgantt
-  projectscale monthly
-  Project starts the 20th of september 2020
-  [Prototype design] as [TASK1] requires 130 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 20 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale monthly
+Project starts the 20th of september 2020
+[Prototype design] as [TASK1] requires 130 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 20 days
+[TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 * With zoom
-  ```plantuml
-  @startgantt
-  projectscale monthly zoom 3
-  Project starts the 20th of september 2020
-  [Prototype design] as [TASK1] requires 130 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 20 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale monthly zoom 3
+Project starts the 20th of september 2020
+[Prototype design] as [TASK1] requires 130 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 20 days
+[TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 
 ### Zoom on quarterly scale
 * Without zoom
-  ```plantuml
-  @startgantt
-  projectscale quarterly
-  Project starts the 20th of september 2020
-  [Prototype design] as [TASK1] requires 130 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 20 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale quarterly
+Project starts the 20th of september 2020
+[Prototype design] as [TASK1] requires 130 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 20 days
+[TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 * With zoom
-  ```plantuml
-  @startgantt
-  projectscale quarterly zoom 7
-  Project starts the 20th of september 2020
-  [Prototype design] as [TASK1] requires 130 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 20 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale quarterly zoom 7
+Project starts the 20th of september 2020
+[Prototype design] as [TASK1] requires 130 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 20 days
+[TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 ### Zoom on yearly scale
 * Without zoom
-  ```plantuml
-  @startgantt
-  projectscale yearly
-  Project starts the 1st of october 2020
-  [Prototype design] as [TASK1] requires 700 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 200 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale yearly
+Project starts the 1st of october 2020
+[Prototype design] as [TASK1] requires 700 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 200 days
+[TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
 * With zoom
-  ```plantuml
-  @startgantt
-  projectscale yearly zoom 2
-  Project starts the 1st of october 2020
-  [Prototype design] as [TASK1] requires 700 days
-  [TASK1] is colored in Lavender/LightBlue
-  [Testing] requires 200 days
-  [TASK1]->[Testing]
+```plantuml
+@startgantt
+projectscale yearly zoom 2
+Project starts the 1st of october 2020
+[Prototype design] as [TASK1] requires 700 days
+[TASK1] is colored in Lavender/LightBlue
+[Testing] requires 200 days
+[TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1205,10 +1205,10 @@ Project starts the 2020-12-01
 sunday are closed
 
 note bottom
-memo1 ...
-memo2 ...
-explanations1 ...
-explanations2 ...
+  memo1 ...
+  memo2 ...
+  explanations1 ...
+  explanations2 ...
 end note
 
 [Task2] requires 20 days
@@ -1234,7 +1234,7 @@ end note
 
 ### Clean style
 
-With style, you can also clean a Gantt diagram *(showing tasks, dependencies and relative durations only - but no actual start date and no actual scale)*:
+With style, you can also clean a Gantt diagram *(showing tasks, dependencies and relative durations only - but no actual start date and no actual scale)*: 
 ```plantuml
 @startgantt
 <style>
@@ -1314,10 +1314,10 @@ Example with overlap.
 @startgantt
 [task01] requires 15 days
 note bottom
-memo1 ...
-memo2 ...
-explanations1 ...
-explanations2 ...
+  memo1 ...
+  memo2 ...
+  explanations1 ...
+  explanations2 ...
 end note
 
 [task01] -> [task02]
@@ -1373,14 +1373,14 @@ Project starts 2020-09-01
 
 then [task02] requires 8 days
 note bottom
-note for task02
-more notes
+  note for task02
+  more notes
 end note
 
 then [task03] requires 7 days
 note bottom
-note for task03
-more notes
+  note for task03
+  more notes
 end note
 
 -- separator --
@@ -1392,8 +1392,8 @@ end note
 [task 10] starts 2020-09-05 and requires 5 days
 then [task 11] requires 5 days
 note bottom
-note for task11
-more notes
+  note for task11
+  more notes
 end note
 @endgantt
 ```
@@ -1420,14 +1420,14 @@ sunday are closed
 
 You can change link colors:
 * with this syntax: ``with <color> <style> link``
-  ```plantuml
-  @startgantt
-  [T1] requires 4 days
-  [T2] requires 4 days and starts 3 days after [T1]'s end with blue dotted link
-  [T3] requires 4 days and starts 3 days after [T2]'s end with green bold link
-  [T4] requires 4 days and starts 3 days after [T3]'s end with green dashed link
-  @endgantt
-  ```
+```plantuml
+@startgantt
+[T1] requires 4 days
+[T2] requires 4 days and starts 3 days after [T1]'s end with blue dotted link
+[T3] requires 4 days and starts 3 days after [T2]'s end with green bold link
+[T4] requires 4 days and starts 3 days after [T3]'s end with green dashed link
+@endgantt
+```
 
 
 * or directly by using arrow style
@@ -1455,7 +1455,7 @@ Then [Run test]  requires 4 days
 
 ## Tasks or Milestones on the same line
 
-You can put Tasks or Milestones on the same line, with this syntax:
+You can put Tasks or Milestones on the same line, with this syntax: 
 * `[T|M] displays on same row as [T|M]`
 
 ```plantuml
@@ -1568,8 +1568,8 @@ of the gantt diagram *(as for [sequence diagram](sequence-diagram))*.
 Examples on:
 
 * daily scale *(without project start)*
-  ```plantuml
-  @startgantt
+```plantuml
+@startgantt
 
 hide footbox
 title Foot Box removed
@@ -1580,8 +1580,8 @@ title Foot Box removed
 ```
 
 * daily scale
-  ```plantuml
-  @startgantt
+```plantuml
+@startgantt
 
 Project starts the 20th of september 2017
 [Prototype design] as [TASK1] requires 13 days
@@ -1592,9 +1592,9 @@ hide footbox
 ```
 
 * weekly scale
-  ```plantuml
-  @startgantt
-  hide footbox
+```plantuml
+@startgantt
+hide footbox
 
 printscale weekly
 saturday are closed
@@ -1607,14 +1607,14 @@ Project starts the 1st of january 2021
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 
 * monthly scale
-  ```plantuml
-  @startgantt
+```plantuml
+@startgantt
 
 hide footbox
 
@@ -1626,13 +1626,13 @@ Project starts the 20th of september 2020
 [TASK1]->[Testing]
 
 2021-01-18 to 2021-01-22 are named [End's committee]
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
 * quarterly scale
-  ```plantuml
-  @startgantt
+```plantuml
+@startgantt
 
 hide footbox
 
@@ -1643,13 +1643,13 @@ Project starts the 1st of october 2020
 [Testing] requires 200 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
 * yearly scale
-  ```plantuml
-  @startgantt
+```plantuml
+@startgantt
 
 hide footbox
 
@@ -1660,7 +1660,7 @@ Project starts the 1st of october 2020
 [Testing] requires 200 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-03-22 are colored in salmon
+2021-01-18 to 2021-03-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1682,7 +1682,7 @@ Project starts 2021-01-01
 [Testing] requires 14 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1699,7 +1699,7 @@ Project starts 2021-01-01
 [Testing] requires 14 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1716,7 +1716,7 @@ Project starts 2021-01-01
 [Testing] requires 14 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1733,7 +1733,7 @@ Project starts 2021-01-01
 [Testing] requires 14 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1750,7 +1750,7 @@ Project starts 2021-01-01
 [Testing] requires 14 days
 [TASK1]->[Testing]
 
-2021-01-18 to 2021-01-22 are colored in salmon
+2021-01-18 to 2021-01-22 are colored in salmon 
 @endgantt
 ```
 
@@ -1826,81 +1826,81 @@ label = "Label on", ('first'|'last'), " column" , ['and', ('left'|'right'), ' al
 ### Label on first column
 
 * Left aligned
-  ```plantuml
-  @startgantt
-  Label on first column and left aligned
-  [Task1] requires 1 days
-  then [Task2_long_long_long] as [T2] requires 2 days
-  -- Phase Two --
-  then [Task3] as [T3] requires 2 days
-  [Task4] as [T4] requires 1 day
-  [Task5] as [T5] requires 2 days
-  [T2] -> [T4]
-  [T2] -> [T5]
-  [Task6_long_long_long] as [T6] requires 4 days
-  [T3] -> [T6]
-  [T5] -> [T6]
-  [End] happens 1 day after [T6]'s end
-  @endgantt
-  ```
+```plantuml
+@startgantt
+Label on first column and left aligned
+[Task1] requires 1 days
+then [Task2_long_long_long] as [T2] requires 2 days
+-- Phase Two --
+then [Task3] as [T3] requires 2 days
+[Task4] as [T4] requires 1 day
+[Task5] as [T5] requires 2 days
+[T2] -> [T4]
+[T2] -> [T5]
+[Task6_long_long_long] as [T6] requires 4 days
+[T3] -> [T6]
+[T5] -> [T6]
+[End] happens 1 day after [T6]'s end
+@endgantt
+```
 
 * Right aligned
-  ```plantuml
-  @startgantt
-  Label on first column and right aligned
-  [Task1] requires 1 days
-  then [Task2_long_long_long] as [T2] requires 2 days
-  -- Phase Two --
-  then [Task3] as [T3] requires 2 days
-  [Task4] as [T4] requires 1 day
-  [Task5] as [T5] requires 2 days
-  [T2] -> [T4]
-  [T2] -> [T5]
-  [Task6_long_long_long] as [T6] requires 4 days
-  [T3] -> [T6]
-  [T5] -> [T6]
-  [End] happens 1 day after [T6]'s end
-  @endgantt
-  ```
+```plantuml
+@startgantt
+Label on first column and right aligned
+[Task1] requires 1 days
+then [Task2_long_long_long] as [T2] requires 2 days
+-- Phase Two --
+then [Task3] as [T3] requires 2 days
+[Task4] as [T4] requires 1 day
+[Task5] as [T5] requires 2 days
+[T2] -> [T4]
+[T2] -> [T5]
+[Task6_long_long_long] as [T6] requires 4 days
+[T3] -> [T6]
+[T5] -> [T6]
+[End] happens 1 day after [T6]'s end
+@endgantt
+```
 
 ### Label on last column
 * Left aligned
-  ```plantuml
-  @startgantt
-  Label on last column and left aligned
-  [Task1] requires 1 days
-  then [Task2_long_long_long] as [T2] requires 2 days
-  -- Phase Two --
-  then [Task3] as [T3] requires 2 days
-  [Task4] as [T4] requires 1 day
-  [Task5] as [T5] requires 2 days
-  [T2] -> [T4]
-  [T2] -> [T5]
-  [Task6_long_long_long] as [T6] requires 4 days
-  [T3] -> [T6]
-  [T5] -> [T6]
-  [End] happens 1 day after [T6]'s end
-  @endgantt
-  ```
+```plantuml
+@startgantt
+Label on last column and left aligned
+[Task1] requires 1 days
+then [Task2_long_long_long] as [T2] requires 2 days
+-- Phase Two --
+then [Task3] as [T3] requires 2 days
+[Task4] as [T4] requires 1 day
+[Task5] as [T5] requires 2 days
+[T2] -> [T4]
+[T2] -> [T5]
+[Task6_long_long_long] as [T6] requires 4 days
+[T3] -> [T6]
+[T5] -> [T6]
+[End] happens 1 day after [T6]'s end
+@endgantt
+```
 
 * Right aligned
-  ```plantuml
-  @startgantt
-  Label on last column and right aligned
-  [Task1] requires 1 days
-  then [Task2_long_long_long] as [T2] requires 2 days
-  -- Phase Two --
-  then [Task3] as [T3] requires 2 days
-  [Task4] as [T4] requires 1 day
-  [Task5] as [T5] requires 2 days
-  [T2] -> [T4]
-  [T2] -> [T5]
-  [Task6_long_long_long] as [T6] requires 4 days
-  [T3] -> [T6]
-  [T5] -> [T6]
-  [End] happens 1 day after [T6]'s end
-  @endgantt
-  ```
+```plantuml
+@startgantt
+Label on last column and right aligned
+[Task1] requires 1 days
+then [Task2_long_long_long] as [T2] requires 2 days
+-- Phase Two --
+then [Task3] as [T3] requires 2 days
+[Task4] as [T4] requires 1 day
+[Task5] as [T5] requires 2 days
+[T2] -> [T4]
+[T2] -> [T5]
+[Task6_long_long_long] as [T6] requires 4 days
+[T3] -> [T6]
+[T5] -> [T6]
+[End] happens 1 day after [T6]'s end
+@endgantt
+```
 
 *[Ref. [QA-12433](https://forum.plantuml.net/12433/how-to-increase-width-of-day-in-gantt-diagram?show=13768#a13768)]*
 
@@ -1918,4 +1918,5 @@ A **month** is a synonym for 30 days.
 
 
 *[Ref. [QA-14494](https://forum.plantuml.net/14494/is-it-possible-to-color-the-days-in-the-default-gantt-diagram?show=20277#c20277)]*
+
 

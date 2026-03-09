@@ -79,55 +79,55 @@ entity Entity01 {
 skinparam linetype ortho
 
 entity "User" as e01 {
-*user_id : number <<generated>>
---
-*name : text
-description : text
+  *user_id : number <<generated>>
+  --
+  *name : text
+  description : text
 }
 
 entity "Card" as e02 {
-*card_id : number <<generated>>
-sync_enabled: boolean
-version: number
-last_sync_version: number
---
-*user_id : number <<FK>>
-other_details : text
+  *card_id : number <<generated>>
+  sync_enabled: boolean
+  version: number
+  last_sync_version: number
+  --
+  *user_id : number <<FK>>
+  other_details : text
 }
 
 entity "CardHistory" as e05 {
-*card_history_id : number <<generated>>
-version : number
---
-*card_id : number <<FK>>
-other_details : text
+  *card_history_id : number <<generated>>
+  version : number
+  --
+  *card_id : number <<FK>>
+  other_details : text
 }
 
 entity "CardsAccounts" as e04 {
-*id : number <<generated>>
---
-card_id : number <<FK>>
-account_id : number <<FK>>
-other_details : text
+  *id : number <<generated>>
+  --
+  card_id : number <<FK>>
+  account_id : number <<FK>>
+  other_details : text
 }
 
 
 entity "Account" as e03 {
-*account_id : number <<generated>>
---
-user_id : number <<FK>>
-other_details : text
+  *account_id : number <<generated>>
+  --
+  user_id : number <<FK>>
+  other_details : text
 }
 
 entity "Stream" as e06 {
-*id : number <<generated>>
-version: number
-searchingText: string
---
-owner_id : number <<FK>>
-follower_id : number <<FK>>
-card_id: number <<FK>>
-other_details : text
+  *id : number <<generated>>
+  version: number
+  searchingText: string
+  --
+  owner_id : number <<FK>>
+  follower_id : number <<FK>>
+  card_id: number <<FK>>
+  other_details : text
 }
 
 
@@ -147,4 +147,5 @@ e03 }|..|| e06
 ```
 
 Currently the crows feet do not look very good when the relationship is drawn at an angle to the entity.  This can be avoided by using the ``linetype ortho`` skinparam.
+
 

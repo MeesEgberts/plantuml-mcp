@@ -554,7 +554,7 @@ ConstantExpression = Expression;
 ```
 
 
-## Remaining defects
+## Remaining defects 
 
 ### Could you put 'arrow head' on all rerouted lines?
 
@@ -607,4 +607,5 @@ consonant = letter - vowel;
 
 
 *[Ref. [QA-16735](https://forum.plantuml.net/16735/ebnf-allow-full-restriction-management-with-except-symbol)]*
+
 

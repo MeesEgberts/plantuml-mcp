@@ -36,7 +36,7 @@ Everything that starts with ``simple quote '`` at the beginning of a line is a c
 ```
 
 ### Block comment
-Block comment use C-style comments except that instead of ``*`` you use an apostrophe ``'``,
+Block comment use C-style comments except that instead of ``*`` you use an apostrophe ``'``, 
 then you can also put comments on several lines using ``/'`` to start and ``'/`` to end.
 
 
@@ -134,8 +134,8 @@ and ``end title`` keywords.
 @startuml
 
 title
-<u>Simple</u> communication example
-on <i>several</i> lines and using <back:cadetblue>creole tags</back>
+ <u>Simple</u> communication example
+ on <i>several</i> lines and using <back:cadetblue>creole tags</back>
 end title
 
 Alice -> Bob: Authentication Request
@@ -195,8 +195,8 @@ alignment for the legend.
 @startuml
 Alice -> Bob : Hello
 legend right
-Short
-legend
+  Short
+  legend
 endlegend
 @enduml
 ```
@@ -284,7 +284,7 @@ legend
 The legend
 end legend
 
-a -- b
+a -- b 
 
 @enduml
 ```
@@ -354,8 +354,8 @@ The legend
 end legend
 
 object user {
-name = "Dummy"
-id = 123
+  name = "Dummy"
+  id = 123
 }
 
 @enduml
@@ -378,8 +378,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endmindmap
 ```
@@ -401,9 +401,9 @@ The legend
 end legend
 
 nwdiag {
-network inet {
-web01 [shape = cloud]
-}
+  network inet {
+      web01 [shape = cloud]
+  }
 }
 
 @endnwdiag
@@ -501,8 +501,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endwbs
 ```
@@ -528,9 +528,9 @@ The legend
 end legend
 
 {+
-Login    | "MyName   "
-Password | "****     "
-[Cancel] | [  OK   ]
+  Login    | "MyName   "
+  Password | "****     "
+  [Cancel] | [  OK   ]
 }
 @endsalt
 ```
@@ -543,12 +543,12 @@ Password | "****     "
 
 [[#00CA00#DONE]]
 
-FYI:
+FYI: 
 * all is only good for **``Sequence diagram``**
 * ``title``, ``caption`` and ``legend`` are good for all diagrams except for **``salt diagram``**
-  [[#FFD700#FIXME]] 🚩
+[[#FFD700#FIXME]] 🚩
 * Now *(test on 1.2020.18-19)* ``header``, ``footer`` are not good for **all other diagrams** except only for **``Sequence diagram``**.
-  To be fix; Thanks
+To be fix; Thanks
 
 [[#FFD700#FIXME]]
 
@@ -600,26 +600,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -655,26 +655,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -710,26 +710,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -744,7 +744,7 @@ legend
 The legend
 end legend
 
-a -- b
+a -- b 
 
 @enduml
 ```
@@ -761,26 +761,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -813,26 +813,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -866,26 +866,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -901,8 +901,8 @@ The legend
 end legend
 
 object user {
-name = "Dummy"
-id = 123
+  name = "Dummy"
+  id = 123
 }
 
 @enduml
@@ -920,26 +920,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -955,8 +955,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endmindmap
 ```
@@ -973,26 +973,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -1008,9 +1008,9 @@ The legend
 end legend
 
 nwdiag {
-network inet {
-web01 [shape = cloud]
-}
+  network inet {
+      web01 [shape = cloud]
+  }
 }
 
 @endnwdiag
@@ -1028,26 +1028,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -1078,26 +1078,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -1130,26 +1130,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -1193,26 +1193,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 header some header
@@ -1228,8 +1228,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endwbs
 ```
@@ -1237,9 +1237,9 @@ end legend
 
 ### Wireframe (SALT)
 
-[[#FFD700#FIXME]]
+[[#FFD700#FIXME]] 
 Fix all **(``title``, ``caption``, ``legend``, ``header``, ``footer``)** for salt.
-[[#FFD700#FIXME]]
+[[#FFD700#FIXME]] 
 
 ```plantuml
 @startsalt
@@ -1251,26 +1251,26 @@ title {
 }
 
 header {
-HorizontalAlignment center
-FontSize 26
-FontColor purple
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
 }
 
 footer {
-HorizontalAlignment left
-FontSize 28
-FontColor red
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
 }
 
 legend {
-FontSize 30
-BackGroundColor yellow
-Margin 30
-Padding 50
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
 }
 
 caption {
-FontSize 32
+  FontSize 32
 }
 </style>
 @startsalt
@@ -1287,9 +1287,9 @@ The legend
 end legend
 
 {+
-Login    | "MyName   "
-Password | "****     "
-[Cancel] | [  OK   ]
+  Login    | "MyName   "
+  Password | "****     "
+  [Cancel] | [  OK   ]
 }
 @endsalt
 ```
@@ -1342,7 +1342,7 @@ Cropped on the top and on the left
 @startuml
 mainframe This is a **mainframe**
 
-a -- b
+a -- b 
 @enduml
 ```
 
@@ -1384,8 +1384,8 @@ Cropped on the top and on the left
 mainframe This is a **mainframe**
 
 object user {
-name = "Dummy"
-id = 123
+  name = "Dummy"
+  id = 123
 }
 @enduml
 ```
@@ -1400,10 +1400,10 @@ Cropped on the top!
 mainframe This is a **mainframe**
 
 * r
-  ** d1
-  ** d2
-  @endmindmap
-  ```
+** d1
+** d2
+@endmindmap
+```
 
 ### Network (nwdiag)
 ```plantuml
@@ -1411,9 +1411,9 @@ mainframe This is a **mainframe**
 mainframe This is a **mainframe**
 
 nwdiag {
-network inet {
-web01 [shape = cloud]
-}
+  network inet {
+      web01 [shape = cloud]
+  }
 }
 @endnwdiag
 ```
@@ -1557,7 +1557,7 @@ legend
 The legend
 end legend
 
-a -- b
+a -- b 
 
 @enduml
 ```
@@ -1626,8 +1626,8 @@ The legend
 end legend
 
 object user {
-name = "Dummy"
-id = 123
+  name = "Dummy"
+  id = 123
 }
 
 @enduml
@@ -1651,8 +1651,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endmindmap
 ```
@@ -1675,9 +1675,9 @@ The legend
 end legend
 
 nwdiag {
-network inet {
-web01 [shape = cloud]
-}
+  network inet {
+      web01 [shape = cloud]
+  }
 }
 
 @endnwdiag
@@ -1779,8 +1779,8 @@ The legend
 end legend
 
 * r
-  ** d1
-  ** d2
+** d1
+** d2
 
 @endwbs
 ```
@@ -1804,10 +1804,11 @@ The legend
 end legend
 
 {+
-Login    | "MyName   "
-Password | "****     "
-[Cancel] | [  OK   ]
+  Login    | "MyName   "
+  Password | "****     "
+  [Cancel] | [  OK   ]
 }
 @endsalt
 ```
+
 

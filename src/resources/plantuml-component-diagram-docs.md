@@ -94,13 +94,13 @@ keywords to define notes related to a single object.
 note top of C: A top note
 
 note bottom of C
-A bottom note can also
-be on several lines
+  A bottom note can also
+  be on several lines
 end note
 
 note left of C
-A left note can also
-be on several lines
+  A left note can also
+  be on several lines
 end note
 
 note right of C: A right note
@@ -114,8 +114,8 @@ keywords, then linked to other objects using the ``..`` symbol or whatever arrow
 [Component] as C
 
 note as N
-A floating note can also
-be on several lines
+  A floating note can also
+  be on several lines
 end note
 
 C .. N
@@ -134,8 +134,8 @@ DA - [First Component]
 note left of HTTP : Web Service only
 
 note right of [First Component]
-A note can also
-be on several lines
+  A note can also
+  be on several lines
 end note
 
 @enduml
@@ -156,27 +156,27 @@ You can use several keywords to group components and interfaces together:
 @startuml
 
 package "Some Group" {
-HTTP - [First Component]
-[Another Component]
+  HTTP - [First Component]
+  [Another Component]
 }
 
 node "Other Groups" {
-FTP - [Second Component]
-[First Component] --> FTP
+  FTP - [Second Component]
+  [First Component] --> FTP
 }
 
 cloud {
-[Example 1]
+  [Example 1]
 }
 
 
 database "MySql" {
-folder "This is my folder" {
-[Folder 3]
-}
-frame "Foo" {
-[Frame 4]
-}
+  folder "This is my folder" {
+    [Folder 3]
+  }
+  frame "Foo" {
+    [Frame 4]
+  }
 }
 
 
@@ -340,9 +340,9 @@ FFFFFFFFFFFFFFFF
 
 
 rectangle " End to End\nbusiness process" <<$businessProcess>> {
-rectangle "inner process 1" <<$businessProcess>> as src
-rectangle "inner process 2" <<$businessProcess>> as tgt
-src -> tgt
+ rectangle "inner process 1" <<$businessProcess>> as src
+ rectangle "inner process 2" <<$businessProcess>> as tgt
+ src -> tgt
 }
 @enduml
 ```
@@ -365,20 +365,20 @@ You can define specific color and fonts for stereotyped components and interface
 @startuml
 
 skinparam interface {
-backgroundColor RosyBrown
-borderColor orange
+  backgroundColor RosyBrown
+  borderColor orange
 }
 
 skinparam component {
-FontSize 13
-BackgroundColor<<Apache>> Pink
-BorderColor<<Apache>> #FF6655
-FontName Courier
-BorderColor black
-BackgroundColor gold
-ArrowFontName Impact
-ArrowColor #FF6655
-ArrowFontColor #777777
+  FontSize 13
+  BackgroundColor<<Apache>> Pink
+  BorderColor<<Apache>> #FF6655
+  FontName Courier
+  BorderColor black
+  BackgroundColor gold
+  ArrowFontName Impact
+  ArrowColor #FF6655
+  ArrowFontColor #777777
 }
 
 () "Data Access" as DA
@@ -395,14 +395,14 @@ HTTP - WS
 @startuml
 
 skinparam component {
-backgroundColor<<static lib>> DarkKhaki
-backgroundColor<<shared lib>> Green
+  backgroundColor<<static lib>> DarkKhaki
+  backgroundColor<<shared lib>> Green
 }
 
 skinparam node {
-borderColor Green
-backgroundColor Yellow
-backgroundColor<<shared_node>> Magenta
+  borderColor Green
+  backgroundColor Yellow
+  backgroundColor<<shared_node>> Magenta
 }
 skinparam databaseBackgroundColor Aqua
 
@@ -420,50 +420,50 @@ database Production
 
 ## Specific SkinParameter
 
-### componentStyle
+### componentStyle 
 
 * By default (or with `skinparam componentStyle uml2`), you have an icon for component
-  ```plantuml
-  @startuml
-  skinparam BackgroundColor transparent
-  skinparam componentStyle uml2
-  component A {
-  component "A.1" {
-  }
-  component A.44 {
-  [A4.1]
-  }
-  component "A.2"
-  [A.3]
-  component A.5 [
-  A.5]
-  component A.6 [
-  ]
-  }
-  [a]->[b]
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle uml2
+component A {
+   component "A.1" {
+}
+   component A.44 {
+      [A4.1]
+}
+   component "A.2"
+   [A.3]
+   component A.5 [
+A.5] 
+   component A.6 [
+]
+}
+[a]->[b]
+@enduml
+```
 * If you want to suppress it, and to have only the rectangle, you can use `skinparam componentStyle rectangle`
-  ```plantuml
-  @startuml
-  skinparam BackgroundColor transparent
-  skinparam componentStyle rectangle
-  component A {
-  component "A.1" {
-  }
-  component A.44 {
-  [A4.1]
-  }
-  component "A.2"
-  [A.3]
-  component A.5 [
-  A.5]
-  component A.6 [
-  ]
-  }
-  [a]->[b]
-  @enduml
-  ```
+```plantuml
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+component A {
+   component "A.1" {
+}
+   component A.44 {
+      [A4.1]
+}
+   component "A.2"
+   [A.3]
+   component A.5 [
+A.5] 
+   component A.6 [
+]
+}
+[a]->[b]
+@enduml
+```
 
 *[Ref. [10798](https://forum.plantuml.net/10798)]*
 
@@ -482,24 +482,24 @@ C1 -- C2
 
 But you can:
 * `hide @unlinked` components:
-  ```plantuml
-  @startuml
-  component C1
-  component C2
-  component C3
-  C1 -- C2
+```plantuml
+@startuml
+component C1
+component C2
+component C3
+C1 -- C2
 
 hide @unlinked
 @enduml
 ```
 
 * or `remove @unlinked` components:
-  ```plantuml
-  @startuml
-  component C1
-  component C2
-  component C3
-  C1 -- C2
+```plantuml
+@startuml
+component C1
+component C2
+component C3
+C1 -- C2
 
 remove @unlinked
 @enduml
@@ -525,36 +525,36 @@ C1 -- C2
 
 But you can:
 * `hide $tag13` components:
-  ```plantuml
-  @startuml
-  component C1 $tag13
-  component C2
-  component C3 $tag13
-  C1 -- C2
+```plantuml
+@startuml
+component C1 $tag13
+component C2
+component C3 $tag13
+C1 -- C2
 
 hide $tag13
 @enduml
 ```
 
 * or `remove $tag13` components:
-  ```plantuml
-  @startuml
-  component C1 $tag13
-  component C2
-  component C3 $tag13
-  C1 -- C2
+```plantuml
+@startuml
+component C1 $tag13
+component C2
+component C3 $tag13
+C1 -- C2
 
 remove $tag13
 @enduml
 ```
 
 * or `remove $tag13 and restore $tag1` components:
-  ```plantuml
-  @startuml
-  component C1 $tag13 $tag1
-  component C2
-  component C3 $tag13
-  C1 -- C2
+```plantuml
+@startuml
+component C1 $tag13 $tag1
+component C2
+component C3 $tag13
+C1 -- C2
 
 remove $tag13
 restore $tag1
@@ -562,12 +562,12 @@ restore $tag1
 ```
 
 * or ``remove * and restore $tag1`` components:
-  ```plantuml
-  @startuml
-  component C1 $tag13 $tag1
-  component C2
-  component C3 $tag13
-  C1 -- C2
+```plantuml
+@startuml
+component C1 $tag13 $tag1
+component C2
+component C3 $tag13
+C1 -- C2
 
 remove *
 restore $tag1
@@ -587,9 +587,9 @@ component Component
 ()        Interface
 
 json JSON {
-"fruit":"Apple",
-"size":"Large",
-"color": ["Red", "Green"]
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
 }
 ```
 
@@ -683,3 +683,5 @@ po3 --> o
 c1 --> po1
 @enduml
 ```
+
+
