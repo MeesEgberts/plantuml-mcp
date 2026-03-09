@@ -43,7 +43,7 @@ An MCP (Model Context Protocol) server that generates PlantUML diagrams from nat
 ### Setup
 
 ```bash
-git clone https://github.com/Beyond-Web-Solutions/plantuml-mcp.git
+git clone https://github.com/MeesEgberts/plantuml-mcp.git
 cd plantuml-mcp
 npm install
 npm run build
