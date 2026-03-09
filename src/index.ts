@@ -112,11 +112,17 @@ server.registerTool(
   },
   async ({ plantuml }) => {
     const encoded = encode(plantuml);
+    const imageUrl = `https://www.plantuml.com/plantuml/png/${encoded}`;
+    const editorUrl = `https://editor.plantuml.com/uml/${encoded}`;
+
     return {
       content: [
         {
           type: "text",
-          text: `https://www.plantuml.com/plantuml/png/${encoded}`,
+          text: `Diagram generated successfully. Display the following in your response:
+
+1. The diagram image: ![PlantUML Diagram](${imageUrl})
+2. A clickable link to edit the diagram: [Open in PlantUML Editor](${editorUrl})`,
         },
       ],
     };
