@@ -1,0 +1,36 @@
+{
+  "name": "plantuml-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for generating and rendering PlantUML diagrams from natural language or documentation, with built-in syntax references and diagram type guides.",
+  "main": "index.js",
+  "author": "Mees Egberts",
+  "license": "ISC",
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "plantuml",
+    "diagrams",
+    "uml",
+    "architecture",
+    "claude",
+    "mcp-server"
+  ],
+  "bin": {
+    "plantuml-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "prettier": "3.8.1",
+    "typescript": "^5.9.3"
+  },
+  "files": [
+    "build"
+  ]
+}
