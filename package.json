@@ -1,7 +1,7 @@
 {
   "name": "plantuml-mcp",
   "version": "1.0.0",
-  "description": "MCP server for generating and rendering PlantUML diagrams from natural language or documentation, with built-in syntax references and diagram type guides.",
+  "description": "MCP server for generating standard-compliant PlantUML diagrams from natural language. Bundles official syntax documentation per diagram type to ensure accurate markup, with inline rendering and PlantUML editor integration.",
   "main": "index.js",
   "author": "Mees Egberts",
   "license": "ISC",
