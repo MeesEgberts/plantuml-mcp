@@ -19,15 +19,19 @@
     "plantuml-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "copy-resources": "copyfiles -u 2 src/resources/**/*.md build/resources",
+    "build": "tsc && npm run copy-resources",
     "fetch:plantuml-docs": "scripts/fetch-plantuml-docs.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
+    "@types/plantuml-encoder": "^1.4.2",
+    "plantuml-encoder": "^1.4.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",
+    "copyfiles": "^2.4.1",
     "prettier": "3.8.1",
     "typescript": "^5.9.3"
   },
